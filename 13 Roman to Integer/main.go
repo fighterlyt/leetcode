@@ -9,6 +9,7 @@ var (
 		"III":     3,
 		"LVIII":   58,
 		"MCMXCIV": 1994,
+		"DCXXI":   621,
 	}
 )
 
@@ -61,6 +62,7 @@ func romanToInt(s string) int {
 		if last > current { // 从大到小，开始累计
 			value += last * times
 			last = current
+			times = 1
 			continue
 		}
 
